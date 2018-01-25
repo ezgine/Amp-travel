@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+*:not(.material-icons) {
+  font-family: "MagistralLight", "Roboto", Tahoma, Arial, Helvetica,
+  "Heiti SC", "Heiti TC", "黑体", "黑體",
+  "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "微軟雅黑",
+  "宋体", "SimSun", "STXihei", "华文细黑", "sans-serif" !important;
+}
+
+a {
+  text-decoration: none;
+  color: #03A9F4;
+}
+
+.outline {
+  outline: 1px solid rgba(255,0,0,0.12);
+}
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.mat-16 {
+  font-size: 16px;
+  display: inline;
+}
+
+.material-icons.mat-24 {
+  font-size: 24px;
+  display: inline;
+}
+
+.material-icons.mat-32 {
+  font-size: 32px;
+  display: inline;
+}
+
+.material-icons.mat-40 {
+  font-size: 40px;
+  display: inline;
+}
+
+.material-icons.mat-48 {
+  font-size: 48px;
+  display: inline;
+}
+
+.material-icons.mat-56 {
+  font-size: 56px;
+  display: inline;
+}

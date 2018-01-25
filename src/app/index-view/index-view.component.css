@@ -1,0 +1,19 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width:50%;
+}
+.baise{
+  position: absolute;
+  z-index: -1;
+  height: 600px;
+  width: 120%;
+  background-color: #fff;
+  -webkit-transform:translate(-60px,-80px) rotate(20deg);
+  transform:translate(-60px,-80px) rotate(20deg);
+  -webkit-transform-origin: 25% 0;
+  transform-origin: -5% 0;
+}
