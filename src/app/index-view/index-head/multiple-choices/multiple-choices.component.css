@@ -1,0 +1,45 @@
+#nav{
+  width:60%;
+  margin:100px auto;
+}
+#nav ul li{
+  position:relative;
+  list-style: none;
+  width:180px;
+  height:105px;
+  float:left;
+  margin: 30px 5px;
+  cursor: pointer;
+}
+#nav ul li:before{/*相当于在li内容的前面添加内容*/
+  transform:rotate(60deg);
+}
+#nav ul li:after{/*相当于在li内容的后面添加内容*/
+  transform:rotate(-60deg);
+}
+#nav ul li img{
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  z-index: 99;
+  transition: 1s;/*css3动画过渡:在设定时间内改变*/
+}
+#nav ul li span{
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  z-index: 99;
+  transition: 1s;/*css3动画过渡:在设定时间内改变*/
+}
+#nav ul li:hover img{
+  transform:rotate(360deg) scale(2);/*rotate()旋转  scale()放大,默认1*/
+}
+#nav ul li:hover span{
+  transform:rotate(360deg) scale(2);/*rotate()旋转  scale()放大,默认1*/
+}

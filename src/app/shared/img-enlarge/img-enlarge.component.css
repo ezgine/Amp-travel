@@ -1,0 +1,10 @@
+.div1{
+  overflow: hidden;
+}
+.div1 img{
+  cursor: pointer;
+  transition: all 2s;
+}
+.div1 img:hover{
+  transform: scale(1.4);
+}

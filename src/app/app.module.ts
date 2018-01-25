@@ -27,19 +27,32 @@ import {
   MatButtonToggleModule,
   MatAutocompleteModule,
   MatTabsModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatGridListModule
 } from '@angular/material';
 import {KSSwiperModule} from "angular2-swiper";
 
 import { AppComponent } from './app.component';
 import { IndexViewComponent } from './index-view/index-view.component';
 import { CarouselImgComponent } from './shared/carousel-img/carousel-img.component';
+import { IndexHeadComponent } from './index-view/index-head/index-head.component';
+import { MultipleChoicesComponent } from './index-view/index-head/multiple-choices/multiple-choices.component';
+import { ImageTextComponent } from './index-view/index-head/image-text/image-text.component';
+import { StarComponent } from './shared/star/star.component';
+import { ImgEnlargeComponent } from './shared/img-enlarge/img-enlarge.component';
+import { FooterViewComponent } from './shared/footer-view/footer-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexViewComponent,
     CarouselImgComponent,
+    IndexHeadComponent,
+    MultipleChoicesComponent,
+    ImageTextComponent,
+    StarComponent,
+    ImgEnlargeComponent,
+    FooterViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +82,7 @@ import { CarouselImgComponent } from './shared/carousel-img/carousel-img.compone
     MatDatepickerModule,
     MatAutocompleteModule,
     MatNativeDateModule,
+    MatGridListModule,
     KSSwiperModule
   ],
   providers: [],

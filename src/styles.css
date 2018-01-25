@@ -23,7 +23,6 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 *:not(.material-icons) {
   font-family: "MagistralLight", "Roboto", Tahoma, Arial, Helvetica,

@@ -10,10 +10,10 @@
   position: absolute;
   z-index: -1;
   height: 600px;
-  width: 120%;
+  width: 100%;
   background-color: #fff;
-  -webkit-transform:translate(-60px,-80px) rotate(20deg);
-  transform:translate(-60px,-80px) rotate(20deg);
+  -webkit-transform:translate(20px,40px) rotate(21deg);
+  transform:translate(40px,40px) rotate(22deg);
   -webkit-transform-origin: 25% 0;
-  transform-origin: -5% 0;
+  transform-origin: -45% 0;
 }
