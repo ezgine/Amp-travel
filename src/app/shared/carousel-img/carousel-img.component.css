@@ -2,3 +2,9 @@
   width: 100%;
   height: 100%;
 }
+@media all and (min-width: 600px) and (max-width: 1279px){
+  .swiper1 {
+    width: 100%;
+    height: 90%;
+  }
+}

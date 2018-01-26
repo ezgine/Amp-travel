@@ -6,14 +6,26 @@
 .example-container > * {
   width:50%;
 }
-.baise{
+
+.whiteBackground{
   position: absolute;
   z-index: -1;
-  height: 600px;
+  height: 800px;
   width: 100%;
   background-color: #fff;
-  -webkit-transform:translate(20px,40px) rotate(21deg);
   transform:translate(40px,40px) rotate(22deg);
-  -webkit-transform-origin: 25% 0;
-  transform-origin: -45% 0;
+  transform-origin: -38% 0;
+}
+.carousel{
+  position: absolute;
+  left:0;
+  top:0;
+  z-index:-2;
+  height:100%;
+  width:100%;
+}
+.indexHead{
+  position: absolute;
+  z-index: 1;
+  width:100%;
 }

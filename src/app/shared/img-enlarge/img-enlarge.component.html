@@ -1,6 +1,6 @@
-<div style="font-size: 50px;margin-top: 100px;">Featured Destinations</div>
+<div ngStyle.gt-xs="font-size: 50px;margin-top:100px;" ngStyle.lt-sm="font-size: 30px;margin-top:50px;">Featured Destinations</div>
 
-<div class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="20px" style="margin-top: 50px;">
+<div fxHide.lt-sm class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="20px" style="margin-top: 50px;">
   <span fxFill></span>
 
   <div fxFlex="23">
@@ -60,4 +60,84 @@
   </div>
 
   <span fxFill></span>
+</div>
+
+
+
+<div fxHide.gt-xs class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="10px" style="margin-top: 50px;">
+  <span fxFill></span>
+
+  <div fxFlex="45">
+    <div class="div1">
+      <div style="position: absolute;z-index: 99;color:#fff;">
+        <div style="font-weight: bold;font-size: 20px;">NEW YORK</div>
+        <div style="font-size: 15px;">379 adventures</div>
+      </div>
+      <img src="../../assets/images/travel/city/new-york.jpg" height="410"/>
+    </div>
+  </div>
+
+  <div fxFlex="45" fxLayout="column">
+    <div class="div1">
+      <div style="position: absolute;z-index: 99;color:#fff;">
+        <div style="font-weight: bold;font-size: 20px;">BARCELONA</div>
+        <div style="font-size: 15px;">68 adventures</div>
+      </div>
+      <img src="../../assets/images/travel/city/barcelona.jpg" height="200"/>
+    </div>
+    <div style="height:10px;"></div>
+    <div class="div1">
+      <div style="position: absolute;z-index: 99;color:#fff;">
+        <div style="font-weight: bold;font-size: 20px;">PARIS</div>
+        <div style="font-size: 15px;">221 adventures</div>
+      </div>
+      <img src="../../assets/images/travel/city/paris.jpg" height="200"/>
+    </div>
+  </div>
+
+  <div fxFlex="45" style="height:10px;"></div>
+  <div fxFlex="45" style="height:10px;"></div>
+
+  <div fxFlex="45" fxLayout="column">
+    <div class="div1">
+      <div style="position: absolute;z-index: 99;color:#fff;">
+        <div style="font-weight: bold;font-size: 20px;">TOKYO</div>
+        <div style="font-size: 15px;">500+ adventures</div>
+      </div>
+      <img src="../../assets/images/travel/city/tokyo.jpg" height="200"/>
+    </div>
+    <div style="height:10px;"></div>
+    <div class="div1">
+      <div style="position: absolute;z-index: 99;color:#fff;">
+        <div style="font-weight: bold;font-size: 20px;">CHICAGO</div>
+        <div style="font-size: 15px;">143 adventures</div>
+      </div>
+      <img src="../../assets/images/travel/city/chicago.jpg" height="200"/>
+    </div>
+  </div>
+
+  <div fxFlex="45">
+    <div class="div1">
+      <div style="position: absolute;z-index: 99;color:#fff;">
+        <div style="font-weight: bold;font-size: 20px;">REYKJAVIK</div>
+        <div style="font-size: 15px;">87 adventures</div>
+      </div>
+      <img src="../../assets/images/travel/city/reykjavik.jpg" height="410"/>
+    </div>
+  </div>
+
+  <span fxFill></span>
+</div>
+
+<div fxHide.gt-xs class="container-fluid" style="margin-top: 25px;">
+  <div class="row">
+    <div class="col-xs-1" style="padding: 0;"></div>
+    <div class="col-xs-3" style="padding: 0;">
+      <img src="../../assets/images/travel/blogpost-thumbnail.jpg" class="img-thumbnail" alt="aaa"/>
+    </div>
+    <div class="col-xs-8" style="padding: 0;text-align: left;">
+      <div style="margin-top: 5px;margin-left:5px;font-size: 20px;">From the blog</div>
+      <div style="margin-top: 5px;margin-left:5px;">Lorem ipsum dolor sit amet,<br/>consectetur adipiscing elit<br/>amet dolor set.<button mat-button color="primary">Read more</button></div>
+    </div>
+  </div>
 </div>

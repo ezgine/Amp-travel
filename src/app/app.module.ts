@@ -41,6 +41,8 @@ import { ImageTextComponent } from './index-view/index-head/image-text/image-tex
 import { StarComponent } from './shared/star/star.component';
 import { ImgEnlargeComponent } from './shared/img-enlarge/img-enlarge.component';
 import { FooterViewComponent } from './shared/footer-view/footer-view.component';
+import { TravelResultsComponent } from './travel-results/travel-results.component';
+import { ImageTextXsComponent } from './index-view/index-head/image-text-xs/image-text-xs.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { FooterViewComponent } from './shared/footer-view/footer-view.component'
     StarComponent,
     ImgEnlargeComponent,
     FooterViewComponent,
+    TravelResultsComponent,
+    ImageTextXsComponent,
   ],
   imports: [
     BrowserModule,

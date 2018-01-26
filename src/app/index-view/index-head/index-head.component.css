@@ -1,0 +1,107 @@
+.titleText{
+  color:#fff;
+  font-size:70px;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+@media all and (min-width: 600px) and (max-width: 1279px){
+  .titleText{
+    font-size:40px;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 0;
+  }
+}
+.titleText_gt{
+  color:#fff;
+  font-size:40px;
+  margin-top: 40%;
+  margin-left: 5%;
+}
+@media all and (max-width: 350px){
+  .titleText_gt{
+    color:#fff;
+    font-size:30px;
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+}
+
+.headInput{
+  width:30%;
+  background:#ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 2px 3px #888888;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.headInput_xs{
+  width:90%;
+  margin-left: 5%;
+  border: 1px solid #8F98A3;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+.headInput_xs:hover{
+  border: 1px solid #03A9F4;
+}
+
+.dateDiv{
+  width:45%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.dateDiv_xs{
+  margin-top: 2%;
+  width:100%;
+}
+.dateText{
+  font-size: 16px;
+  color:#fff;
+}
+
+.buttonDiv{
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.buttonDiv_xs{
+  width:100%;
+}
+.button{
+  font-size: 20px;
+  padding:8px;
+}
+.button_xs{
+  font-size: 20px;
+  padding:8px;
+  width:90%;
+  margin-left: 5%;
+  border-radius: 5px;
+}
+.jump{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10%;
+  font-weight: bold;
+  /*background: #000000;*/
+  /*opacity: 0.7;*/
+}
+@media all and (max-width: 350px){
+  .jump{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 2%;
+  }
+}
+
+.text1{
+  margin-top: 6.5%;
+  background:#F6F6F6;
+}
+.text2{
+  display: inline-block;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  font-size:45px;
+  font-weight: bold;
+}

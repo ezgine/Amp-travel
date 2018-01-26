@@ -1,37 +1,44 @@
-<div class="item" style="font-size:70px;color:#fff;margin-top: 3%;margin-left: 5%;"><strong>Adventures made easy</strong></div>
-<div class="item" style="font-size:26px;color:#fff;margin-top: 2%;margin-left: 5%;">Find and book activities,tours,and experience.</div>
-<!--<div class="form-group" style="width:50%;height:50px;margin-top: 5%;">-->
-<!--<i class="material-icons" style="position:relative;top: 40px;left:20px;">location_on</i>-->
-<!--<input type="text" class="form-control" id="" placeholder="Where would you like to go?" style="text-indent:51px;font-size: 20px;height:100%;" />-->
-<!--</div>-->
-<div class="item" style="width:30%;background:#ffffff;border-radius: 5px;-moz-box-shadow:3px 2px 3px #888888;box-shadow: 3px 2px 3px #888888;margin-top: 2%;margin-left: 5%;">
-  <mat-form-field color="Primary" style="width:90%;font-size: 20px;">
-    <input matInput type="text" required style="font-size: 20px;"/>
-    <mat-placeholder style="font-size: 20px;"><mat-icon matSuffix style="font-size: 20px;">place</mat-icon>&nbsp;&nbsp;&nbsp;Where would you like to go?</mat-placeholder>
+<div ngClass.lt-sm="container-fluid">
+  <mat-icon style="font-size: 40px;color:#fff;" ngStyle.gt-xs="margin-top:20px;margin-left:20px;">blur_on</mat-icon>
+</div>
+
+<div class="titleText_gt" fxHide.gt-xs><strong>Adventures<br/>made easy</strong></div>
+<div class="titleText" fxHide.lt-sm><strong>Adventures made easy</strong></div>
+<div class="titleText" fxHide.lt-sm style="font-size: 26px;">Find and book activities,tours,and experience.</div>
+
+<div ngClass.gt-md="headInput"  ngClass.xs="headInput_xs">
+  <mat-form-field style="width:100%;font-size: 20px;">
+    <input matInput type="text" required style="text-indent: 10px;color:#fff;"/>
+    <mat-placeholder style="color:#8F98A3;"><mat-icon matSuffix style="color:#8F98A3;">place</mat-icon>&nbsp;&nbsp;&nbsp;Where would you like to go?</mat-placeholder>
   </mat-form-field>
 </div>
 
-<div class="item" fxLayout="column" style="width:45%;margin-top: 2%;margin-left: 5%;">
-  <mat-form-field style="font-size: 20px;width:30%;">
-    <input matInput [matDatepicker]="dp1" disabled>
-    <mat-placeholder><mat-icon matSuffix>flight_takeoff</mat-icon>&nbsp;Departure</mat-placeholder>
+<div fxLayout="column" fxLayout.xs="row" ngClass.gt-md="dateDiv" ngClass.xs="dateDiv_xs">
+  <span fxFlex.xs="5"></span>
+  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.xs="dateText">
+    <input matInput [matDatepicker]="dp1" disabled ngClass.xs="dateText">
+    <mat-placeholder ngClass.xs="dateText"><mat-icon matSuffix>flight_takeoff</mat-icon>&nbsp;Departure</mat-placeholder>
     <mat-datepicker-toggle matSuffix [for]="dp1"><mat-icon></mat-icon></mat-datepicker-toggle>
     <mat-datepicker #dp1 disabled="false"></mat-datepicker>
   </mat-form-field>
-  <mat-form-field style="font-size: 20px;width:30%;">
-    <input matInput [matDatepicker]="dp2" disabled>
-    <mat-placeholder><mat-icon matSuffix>flight_land</mat-icon>&nbsp;Return</mat-placeholder>
+  <span fxFlex.xs="10"></span>
+  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.xs="dateText">
+    <input matInput [matDatepicker]="dp2" disabled ngClass.xs="dateText">
+    <mat-placeholder ngClass.xs="dateText"><mat-icon matSuffix>flight_land</mat-icon>&nbsp;Return</mat-placeholder>
     <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
     <mat-datepicker #dp2 disabled="false"></mat-datepicker>
   </mat-form-field>
-  <span fxFill></span>
+  <span fxFlex.xs="5"></span>
 </div>
 
-<div class="item" style="margin-top: 2%;margin-left: 5%;">
-  <button mat-raised-button color="primary" style="font-size: 20px;padding:8px;">Find Adventures & Tours</button>
+<div ngClass.gt-md="buttonDiv" ngClass.xs="buttonDiv_xs">
+  <button mat-raised-button color="primary" ngClass.gt-md="button" ngClass.xs="button_xs">Find Adventures & Tours</button>
+</div>
+<div fxHide.gt-md class="jump">
+  <a href="#a1" style="color:#8F98A3;">Explore<br/><mat-icon matSuffix style="color:#8F98A3;">keyboard_arrow_down</mat-icon></a>
 </div>
 
-<div class="item" fxLayout="row" style="margin-top: 5%;margin-left: 5%;margin-bottom: 3%;">
+<div fxHide.lt-lg fxLayout="row" style="margin-top: 5%;margin-left: 5%;margin-bottom: 3%;">
   <div class="item" fxFlex="50">
     <span style="font-size:50px;font-weight: bold;letter-spacing:1px;">Discover Adventures</span><br/><span style="font-size:20px;letter-spacing:1px;color:#8F98A3;">Get inspired and find your next big trip</span>
   </div>
@@ -44,7 +51,15 @@
   </mat-card>
 </div>
 
-<app-multiple-choices style="padding-top: 45px;padding-bottom: 60px;width:100%;height:100%;text-align: center;"></app-multiple-choices>
-<app-image-text style="text-align: center;"></app-image-text>
+<div fxHide.gt-md fxLayout="row" class="text1">
+  <div class="item" fxFlex="50">
+    <span class="text2">Discover<br/>Adventures</span>
+  </div>
+  <a name="a1"></a>
+</div>
+
+<app-multiple-choices ngStyle.gt-xs="text-align: center;" style="padding-top: 45px;padding-bottom: 60px;width:100%;height:100%;"></app-multiple-choices>
+<app-image-text fxHide.lt-sm style="text-align: center;"></app-image-text>
+<app-image-text-xs fxHide.gt-xs></app-image-text-xs>
 <app-img-enlarge style="text-align: center;"></app-img-enlarge>
 <app-footer-view style="text-align: center;margin-top: 30px;"></app-footer-view>
