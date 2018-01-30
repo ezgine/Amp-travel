@@ -1,0 +1,132 @@
+<div class="container-fluid">
+  <mat-accordion class="row">
+    <mat-expansion-panel class="col-md-10" style="padding:0px;">
+      <mat-expansion-panel-header style="border:1px solid #DCDCDC;">
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+        <mat-panel-description>
+          <div style="">
+            <span>Price&nbsp;&nbsp;</span><span style="padding: 1px;" [ngStyle]="{'background-color': check ? '#DAEFE3' : '#a9a9a9','color': check ? '#54B67E':'#ffffff'}">Up to ${{ check ? value : "0" }}</span>
+          </div>
+          <div style="margin-left: 20px;">
+            <span>Type&nbsp;&nbsp;</span>
+            <span *ngIf="" style="background:#a9a9a9;color: #ffffff;padding: 1px;">All types</span>
+            <span *ngIf="test1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <span *ngIf="test2" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <span *ngIf="test3" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <span *ngIf="test4" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <span *ngIf="test5" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <span *ngIf="test6" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+          </div>
+          <div style="margin-left: 20px;">City</div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="row" style="text-align: left;">
+
+        <div class="col-md-3" style="padding:0px;">
+          <div style="color:#a9a9a9;margin-top: 20px">MAX PRICE</div>
+          <div style="font-size: 20px;margin-top: 10px;">${{ value }}</div>
+          <mat-slider thumbLabel max="800" step="1" style="width: 250px;margin-top: 20px;color:#47B074;" [(ngModel)]="value"></mat-slider>
+        </div>
+
+        <div class="col-md-6" style="padding:0px;">
+          <div style="color:#a9a9a9;margin-top: 20px">TYPE</div>
+
+          <div class="col-md-6" style="height:36px;margin-top: 5px;">
+            <div style="width:70%;">
+              <div class="test" ngClass="{{ test1 ? 'test2' :  'test3'}}" style="background:#FFB6C1;"><div style="margin-top: 7px;text-align: center;"><mat-icon style="color:#fff;">directions_run</mat-icon></div></div>
+            </div>
+            <button mat-button style="padding: 0;position: absolute;width:20%;background:#FFB6C1;" (click)="test(1)"><mat-icon style="color:#fff;">{{ test1 ? "clear" : "add" }}</mat-icon></button>
+          </div>
+
+          <div class="col-md-6" style="height:36px;margin-top: 5px;">
+            <div style="width:70%;">
+              <div class="test" ngClass="{{ test2 ? 'test2' :  'test3'}}" style="background:#FF00FF;"><div style="margin-top: 7px;text-align: center;"><mat-icon style="color:#fff;">flight</mat-icon></div></div>
+            </div>
+            <button mat-button style="padding: 0;position: absolute;width:20%;background:#FF00FF;" (click)="test(2)"><mat-icon style="color:#fff;">{{ test2 ? "clear" : "add" }}</mat-icon></button>
+          </div>
+
+          <div class="col-md-6" style="height:36px;margin-top: 5px;">
+            <div style="width:70%;">
+              <div class="test" ngClass="{{ test3 ? 'test2' :  'test3'}}" style="background:#1E90FF;"><div style="margin-top: 7px;text-align: center;"><mat-icon style="color:#fff;">hotel</mat-icon></div></div>
+            </div>
+            <button mat-button style="padding: 0;position: absolute;width:20%;background:#1E90FF;" (click)="test(3)"><mat-icon style="color:#fff;">{{ test3 ? "clear" : "add" }}</mat-icon></button>
+          </div>
+
+          <div class="col-md-6" style="height:36px;margin-top: 5px;">
+            <div style="width:70%;">
+              <div class="test" ngClass="{{ test4 ? 'test2' :  'test3'}}" style="background:#00FF7F;"><div style="margin-top: 7px;text-align: center;"><mat-icon style="color:#fff;">directions_car</mat-icon></div></div>
+            </div>
+            <button mat-button style="padding: 0;position: absolute;width:20%;background:#00FF7F;" (click)="test(4)"><mat-icon style="color:#fff;">{{ test4 ? "clear" : "add" }}</mat-icon></button>
+          </div>
+
+          <div class="col-md-6" style="height:36px;margin-top: 5px;">
+            <div style="width:70%;">
+              <div class="test" ngClass="{{ test5 ? 'test2' :  'test3'}}" style="background:#FFA500;"><div style="margin-top: 7px;text-align: center;"><mat-icon style="color:#fff;">restaurant</mat-icon></div></div>
+            </div>
+            <button mat-button style="padding: 0;position: absolute;width:20%;background:#FFA500;" (click)="test(5)"><mat-icon style="color:#fff;">{{ test5 ? "clear" : "add" }}</mat-icon></button>
+          </div>
+
+          <div class="col-md-6" style="height:36px;margin-top: 5px;">
+            <div style="width:70%;">
+              <div class="test" ngClass="{{ test6 ? 'test2' :  'test3'}}" style="background:yellow;"><div style="margin-top: 7px;text-align: center;"><mat-icon style="color:#fff;">pool</mat-icon></div></div>
+            </div>
+            <button mat-button style="padding: 0;position: absolute;width:20%;background:yellow;" (click)="test(6)"><mat-icon style="color:#fff;">{{ test6 ? "clear" : "add" }}</mat-icon></button>
+          </div>
+        </div>
+
+        <div class="col-md-3" style="padding:0;">
+          <div style="color:#a9a9a9;margin-top: 20px;margin-left: 20px;">TYPE</div>
+
+          <mat-checkbox align="start" color="warn" value="" style="margin-left: 20px;">
+            <img src="../../../assets/images/1.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
+            <span style="display:inline-block;width:50px;">jinjiang22</span>
+          </mat-checkbox>
+          <mat-checkbox align="start" color="primary" value="" style="margin-left: 20px;">
+            <img src="../../../assets/images/2.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
+            <span style="display:inline-block;width:50px;">jinjiang22</span>
+          </mat-checkbox>
+          <mat-checkbox align="start"  value="" style="margin-left: 20px;">
+            <img src="../../../assets/images/3.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
+            <span style="display:inline-block;width:50px;">jinjiang22</span>
+          </mat-checkbox>
+          <mat-checkbox align="start" color="warn" value="" style="margin-left: 20px;">
+            <img src="../../../assets/images/4.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
+            <span style="display:inline-block;width:50px;">jinjiang22</span>
+          </mat-checkbox>
+          <mat-checkbox align="start" color="primary" value="" style="margin-left: 20px;">
+            <img src="../../../assets/images/5.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
+            <span style="display:inline-block;width:50px;">jinjiang22</span>
+          </mat-checkbox>
+          <mat-checkbox align="start" value="" style="margin-left: 20px;">
+            <img src="../../../assets/images/6.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
+            <span style="display:inline-block;width:50px;">jinjiang22</span>
+          </mat-checkbox>
+        </div>
+
+        <div class="col-md-12" style="text-align:center;">
+          <button type="button" mat-raised-button color="primary" (click)="checkChange2()">重置</button>
+          <button type="button" mat-raised-button color="accent" (click)="checkChange()">搜索</button>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="col-md-2" (opened)="panelOpen = true" (closed)="panelOpen = false" style="padding:0px;">
+      <mat-expansion-panel-header style="border:1px solid #DCDCDC;">
+        <mat-panel-title>
+          Sort by
+        </mat-panel-title>
+        <mat-panel-description>
+          {{panelOpen ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div fxLayout="column">
+        <button mat-button>Basic</button>
+        <button mat-button color="primary">Primary</button>
+        <button mat-button color="accent">Accent</button>
+        <button mat-button color="warn">Warn</button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

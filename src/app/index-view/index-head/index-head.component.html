@@ -4,35 +4,35 @@
 
 <div class="titleText_gt" fxHide.gt-xs><strong>Adventures<br/>made easy</strong></div>
 <div class="titleText" fxHide.lt-sm><strong>Adventures made easy</strong></div>
-<div class="titleText" fxHide.lt-sm style="font-size: 26px;">Find and book activities,tours,and experience.</div>
+<div class="titleText" fxHide.lt-lg style="font-size: 26px;">Find and book activities,tours,and experience.</div>
 
-<div ngClass.gt-md="headInput"  ngClass.xs="headInput_xs">
-  <mat-form-field style="width:100%;font-size: 20px;">
+<div ngClass.gt-md="headInput"  ngClass.xs="headInput_xs" class="headInput_ipad">
+  <mat-form-field style="width:100%;">
     <input matInput type="text" required style="text-indent: 10px;color:#fff;"/>
     <mat-placeholder style="color:#8F98A3;"><mat-icon matSuffix style="color:#8F98A3;">place</mat-icon>&nbsp;&nbsp;&nbsp;Where would you like to go?</mat-placeholder>
   </mat-form-field>
 </div>
 
-<div fxLayout="column" fxLayout.xs="row" ngClass.gt-md="dateDiv" ngClass.xs="dateDiv_xs">
+<div fxLayout="column" fxLayout.lt-lg="row" ngClass.gt-md="dateDiv" class="dateDiv_ipad" ngClass.xs="dateDiv_xs">
   <span fxFlex.xs="5"></span>
-  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.xs="dateText">
-    <input matInput [matDatepicker]="dp1" disabled ngClass.xs="dateText">
-    <mat-placeholder ngClass.xs="dateText"><mat-icon matSuffix>flight_takeoff</mat-icon>&nbsp;Departure</mat-placeholder>
+  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.lt-lg="dateText">
+    <input matInput [matDatepicker]="dp1" disabled ngClass.lt-lg="dateText">
+    <mat-placeholder ngClass.lt-lg="dateText"><mat-icon matSuffix>flight_takeoff</mat-icon>&nbsp;Departure</mat-placeholder>
     <mat-datepicker-toggle matSuffix [for]="dp1"><mat-icon></mat-icon></mat-datepicker-toggle>
     <mat-datepicker #dp1 disabled="false"></mat-datepicker>
   </mat-form-field>
   <span fxFlex.xs="10"></span>
-  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.xs="dateText">
-    <input matInput [matDatepicker]="dp2" disabled ngClass.xs="dateText">
-    <mat-placeholder ngClass.xs="dateText"><mat-icon matSuffix>flight_land</mat-icon>&nbsp;Return</mat-placeholder>
+  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.lt-lg="dateText">
+    <input matInput [matDatepicker]="dp2" disabled ngClass.lt-lg="dateText">
+    <mat-placeholder ngClass.lt-lg="dateText"><mat-icon matSuffix>flight_land</mat-icon>&nbsp;Return</mat-placeholder>
     <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
     <mat-datepicker #dp2 disabled="false"></mat-datepicker>
   </mat-form-field>
   <span fxFlex.xs="5"></span>
 </div>
 
-<div ngClass.gt-md="buttonDiv" ngClass.xs="buttonDiv_xs">
-  <button mat-raised-button color="primary" ngClass.gt-md="button" ngClass.xs="button_xs">Find Adventures & Tours</button>
+<div ngClass.gt-md="buttonDiv" class="buttonDiv_ipad" ngClass.xs="buttonDiv_xs">
+  <button mat-raised-button color="primary" ngClass.gt-md="button" class="button_ipad" ngClass.xs="button_xs">Find Adventures & Tours</button>
 </div>
 <div fxHide.gt-md class="jump">
   <a href="#a1" style="color:#8F98A3;">Explore<br/><mat-icon matSuffix style="color:#8F98A3;">keyboard_arrow_down</mat-icon></a>

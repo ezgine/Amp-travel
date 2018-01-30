@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import 'hammerjs';
@@ -28,7 +29,8 @@ import {
   MatAutocompleteModule,
   MatTabsModule,
   MatNativeDateModule,
-  MatGridListModule
+  MatGridListModule,
+  MatSliderModule
 } from '@angular/material';
 import {KSSwiperModule} from "angular2-swiper";
 
@@ -43,6 +45,9 @@ import { ImgEnlargeComponent } from './shared/img-enlarge/img-enlarge.component'
 import { FooterViewComponent } from './shared/footer-view/footer-view.component';
 import { TravelResultsComponent } from './travel-results/travel-results.component';
 import { ImageTextXsComponent } from './index-view/index-head/image-text-xs/image-text-xs.component';
+import { TravelNavComponent } from './travel-results/travel-nav/travel-nav.component';
+import { TravelPanelComponent } from './travel-results/travel-panel/travel-panel.component';
+import { TravelImgtextComponent } from './travel-results/travel-imgtext/travel-imgtext.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,9 @@ import { ImageTextXsComponent } from './index-view/index-head/image-text-xs/imag
     FooterViewComponent,
     TravelResultsComponent,
     ImageTextXsComponent,
+    TravelNavComponent,
+    TravelPanelComponent,
+    TravelImgtextComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,7 +95,9 @@ import { ImageTextXsComponent } from './index-view/index-head/image-text-xs/imag
     MatAutocompleteModule,
     MatNativeDateModule,
     MatGridListModule,
-    KSSwiperModule
+    MatSliderModule,
+    KSSwiperModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

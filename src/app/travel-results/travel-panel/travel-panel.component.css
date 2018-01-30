@@ -1,0 +1,13 @@
+.test{
+  float: left;
+  height:36px;
+  width:36px;
+  -moz-transition:width 2s;
+  -webkit-transition:width 2s;
+  -o-transition:width 2s;
+  -ms-transition:width 2s;
+  transition:width 2s;
+}
+.test2{
+  width:100%;
+}
