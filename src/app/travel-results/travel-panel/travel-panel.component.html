@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <mat-accordion class="row">
-    <mat-expansion-panel class="col-md-10" style="padding:0px;">
+    <mat-expansion-panel class="col-md-10" style="padding:0px;" [expanded]="step === 1" (opened)="setStep(1)">
       <mat-expansion-panel-header style="border:1px solid #DCDCDC;">
         <mat-panel-title>
           Filters
@@ -11,15 +11,27 @@
           </div>
           <div style="margin-left: 20px;">
             <span>Type&nbsp;&nbsp;</span>
-            <span *ngIf="" style="background:#a9a9a9;color: #ffffff;padding: 1px;">All types</span>
-            <span *ngIf="test1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
-            <span *ngIf="test2" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
-            <span *ngIf="test3" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
-            <span *ngIf="test4" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
-            <span *ngIf="test5" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
-            <span *ngIf="test6" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <!--<span *ngIf="!check" style="background:#a9a9a9;color: #ffffff;padding: 1px;">All types</span>-->
+            <!--<span *ngIf="check">-->
+              <span *ngIf="test1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+              <span *ngIf="test2" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+              <span *ngIf="test3" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+              <span *ngIf="test4" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+              <span *ngIf="test5" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+              <span *ngIf="test6" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+            <!--</span>-->
           </div>
-          <div style="margin-left: 20px;">City</div>
+          <div style="margin-left: 20px;">
+            <span>Type&nbsp;&nbsp;</span>
+            <!--<span *ngIf="check">-->
+              <span *ngIf="checked1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">晋江</span>
+              <span *ngIf="checked2" style="background:#DAEFE3;color: #54B67E;padding: 1px;">泉州</span>
+              <span *ngIf="checked3" style="background:#DAEFE3;color: #54B67E;padding: 1px;">厦门</span>
+              <span *ngIf="checked4" style="background:#DAEFE3;color: #54B67E;padding: 1px;">福州</span>
+              <span *ngIf="checked5" style="background:#DAEFE3;color: #54B67E;padding: 1px;">漳州</span>
+              <span *ngIf="checked6" style="background:#DAEFE3;color: #54B67E;padding: 1px;">三明</span>
+            <!--</span>-->
+          </div>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="row" style="text-align: left;">
@@ -27,7 +39,7 @@
         <div class="col-md-3" style="padding:0px;">
           <div style="color:#a9a9a9;margin-top: 20px">MAX PRICE</div>
           <div style="font-size: 20px;margin-top: 10px;">${{ value }}</div>
-          <mat-slider thumbLabel max="800" step="1" style="width: 250px;margin-top: 20px;color:#47B074;" [(ngModel)]="value"></mat-slider>
+          <mat-slider thumbLabel max="800" step="1" style="width: 250px;margin-top: 20px;color:#47B074;" [(ngModel)]="value" (click)="checkChange()"></mat-slider>
         </div>
 
         <div class="col-md-6" style="padding:0px;">
@@ -79,53 +91,53 @@
         <div class="col-md-3" style="padding:0;">
           <div style="color:#a9a9a9;margin-top: 20px;margin-left: 20px;">TYPE</div>
 
-          <mat-checkbox align="start" color="warn" value="" style="margin-left: 20px;">
+          <mat-checkbox align="start" [(ngModel)]="checked1" color="warn" style="margin-left: 20px;">
             <img src="../../../assets/images/1.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
-            <span style="display:inline-block;width:50px;">jinjiang22</span>
+            <span style="display:inline-block;width:50px;">晋江</span>
           </mat-checkbox>
-          <mat-checkbox align="start" color="primary" value="" style="margin-left: 20px;">
+          <mat-checkbox align="start" [(ngModel)]="checked2" color="primary" style="margin-left: 20px;">
             <img src="../../../assets/images/2.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
-            <span style="display:inline-block;width:50px;">jinjiang22</span>
+            <span style="display:inline-block;width:50px;">泉州</span>
           </mat-checkbox>
-          <mat-checkbox align="start"  value="" style="margin-left: 20px;">
+          <mat-checkbox align="start" [(ngModel)]="checked3" style="margin-left: 20px;">
             <img src="../../../assets/images/3.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
-            <span style="display:inline-block;width:50px;">jinjiang22</span>
+            <span style="display:inline-block;width:50px;">厦门</span>
           </mat-checkbox>
-          <mat-checkbox align="start" color="warn" value="" style="margin-left: 20px;">
+          <mat-checkbox align="start" [(ngModel)]="checked4" color="warn" style="margin-left: 20px;">
             <img src="../../../assets/images/4.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
-            <span style="display:inline-block;width:50px;">jinjiang22</span>
+            <span style="display:inline-block;width:50px;">福州</span>
           </mat-checkbox>
-          <mat-checkbox align="start" color="primary" value="" style="margin-left: 20px;">
+          <mat-checkbox align="start" [(ngModel)]="checked5" color="primary" style="margin-left: 20px;">
             <img src="../../../assets/images/5.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
-            <span style="display:inline-block;width:50px;">jinjiang22</span>
+            <span style="display:inline-block;width:50px;">漳州</span>
           </mat-checkbox>
-          <mat-checkbox align="start" value="" style="margin-left: 20px;">
+          <mat-checkbox align="start" [(ngModel)]="checked6" style="margin-left: 20px;">
             <img src="../../../assets/images/6.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
-            <span style="display:inline-block;width:50px;">jinjiang22</span>
+            <span style="display:inline-block;width:50px;">三明</span>
           </mat-checkbox>
         </div>
 
         <div class="col-md-12" style="text-align:center;">
           <button type="button" mat-raised-button color="primary" (click)="checkChange2()">重置</button>
-          <button type="button" mat-raised-button color="accent" (click)="checkChange()">搜索</button>
+          <button type="button" mat-raised-button color="accent" (click)="nextStep()">搜索</button>
         </div>
       </div>
     </mat-expansion-panel>
 
-    <mat-expansion-panel class="col-md-2" (opened)="panelOpen = true" (closed)="panelOpen = false" style="padding:0px;">
+    <mat-expansion-panel class="col-md-2" style="padding:0px;" [expanded]="step === 2" (opened)="setStep(2)">
       <mat-expansion-panel-header style="border:1px solid #DCDCDC;">
         <mat-panel-title>
           Sort by
         </mat-panel-title>
         <mat-panel-description>
-          {{panelOpen ? 'open' : 'closed'}}
+          {{ sortBy }}
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div fxLayout="column">
-        <button mat-button>Basic</button>
-        <button mat-button color="primary">Primary</button>
-        <button mat-button color="accent">Accent</button>
-        <button mat-button color="warn">Warn</button>
+        <button mat-button (click)="sortby('Basic')">Basic</button>
+        <button mat-button color="primary" (click)="sortby('Primary')">Primary</button>
+        <button mat-button color="accent" (click)="sortby('Accent')">Accent</button>
+        <button mat-button color="warn" (click)="sortby('warn')">Warn</button>
       </div>
     </mat-expansion-panel>
   </mat-accordion>

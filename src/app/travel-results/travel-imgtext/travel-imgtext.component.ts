@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ImgTextService} from "../../services/img-text.service";
 
 @Component({
   selector: 'app-travel-imgtext',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelImgtextComponent implements OnInit {
 
-  constructor() { }
+  xxx: string[];
+
+  constructor(private mailService: ImgTextService) { }
 
   ngOnInit() {
+    this.xxx = this.mailService.messages;
   }
 
 }

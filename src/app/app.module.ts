@@ -49,6 +49,8 @@ import { TravelNavComponent } from './travel-results/travel-nav/travel-nav.compo
 import { TravelPanelComponent } from './travel-results/travel-panel/travel-panel.component';
 import { TravelImgtextComponent } from './travel-results/travel-imgtext/travel-imgtext.component';
 
+import { ImgTextService } from "./services/img-text.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +101,7 @@ import { TravelImgtextComponent } from './travel-results/travel-imgtext/travel-i
     KSSwiperModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ImgTextService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

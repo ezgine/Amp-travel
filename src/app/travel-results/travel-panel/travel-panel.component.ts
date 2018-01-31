@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelPanelComponent implements OnInit {
 
-  panelOpen: boolean = false;
   check: boolean = false;
   value: number = 0;
+  step: number = 0;
+  sortBy: string;
 
   test1: boolean = false;
   test2: boolean = false;
@@ -17,6 +18,15 @@ export class TravelPanelComponent implements OnInit {
   test4: boolean = false;
   test5: boolean = false;
   test6: boolean = false;
+
+  checked1: boolean = false;
+  checked2: boolean = false;
+  checked3: boolean = false;
+  checked4: boolean = false;
+  checked5: boolean = false;
+  checked6: boolean = false;
+
+
 
   constructor() { }
 
@@ -34,6 +44,13 @@ export class TravelPanelComponent implements OnInit {
     this.test4 = false;
     this.test5 = false;
     this.test6 = false;
+    this.checked1 = false;
+    this.checked2 = false;
+    this.checked3 = false;
+    this.checked4 = false;
+    this.checked5 = false;
+    this.checked6 = false;
+    this.value = 0;
   }
 
   test(num) {
@@ -50,6 +67,18 @@ export class TravelPanelComponent implements OnInit {
     } else if (num == 6) {
       this.test6 = !this.test6;
     }
+  }
+
+  setStep(index: number) {
+    this.step = index;
+  }
+  nextStep() {
+    this.step = 0;
+  }
+
+  sortby(xxx: string) {
+    this.sortBy = xxx;
+    this.nextStep();
   }
 
 }
