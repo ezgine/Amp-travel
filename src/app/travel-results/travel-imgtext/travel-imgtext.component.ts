@@ -8,7 +8,7 @@ import {ImgTextService} from "../../services/img-text.service";
 })
 export class TravelImgtextComponent implements OnInit {
 
-  xxx: string[];
+  xxx;
 
   constructor(private mailService: ImgTextService) { }
 

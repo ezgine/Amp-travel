@@ -8,7 +8,7 @@
     <div *ngFor="let product of products" class="swiper-slide" fxLayout="column" fxLayoutAlign="left" style="border:1px dashed #a9a9a9;">
       <img src="{{ product.imgadd }}"/><br/>
       <span style="font-size: 25px;">{{ product.title }}</span>
-      <div fxLayout="column" fxLayoutAlign="center" style="margin-top: 15px;">
+      <div fxLayout="column" fxLayoutAlign="center" style="margin-top: 15px;background:#DCDCDC;">
         <!--<span fxFlex="25" style="font-size: 24px;"><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon></span>-->
         <app-star [rating]="product.rating" style="font-size: 24px;"></app-star>
         <span style="font-size: 24px;"><mat-icon>attach_money</mat-icon>{{ product.price }}</span>

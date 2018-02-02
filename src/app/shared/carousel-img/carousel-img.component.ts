@@ -10,15 +10,15 @@ export class CarouselImgComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    const myswiper1 = new Swiper('#swiper1', {
-      effect : 'fade',
-      autoplay: 3000,
-      autoplayDisableOnInteraction: false,
-      observer: true,
-      observeParents: true,
-      parallax : true,
-      roundLengths : true,
-    });
+    // const myswiper1 = new Swiper('#swiper1', {
+    //   effect : 'fade',
+    //   autoplay: 3000,
+    //   autoplayDisableOnInteraction: false,
+    //   observer: true,
+    //   observeParents: true,
+    //   parallax : true,
+    //   roundLengths : true,
+    // });
   }
 
 }

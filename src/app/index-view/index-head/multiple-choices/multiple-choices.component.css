@@ -58,6 +58,18 @@
   z-index: 99;
   transition: 1s;
 }
+@media screen and (max-width:350px){
+  .nav ul li span{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    z-index: 99;
+    transition: 1s;
+  }
+}
 .nav ul li:hover img{
   transform:rotate(360deg) scale(1.5);
 }

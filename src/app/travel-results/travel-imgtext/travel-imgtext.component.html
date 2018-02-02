@@ -1,7 +1,19 @@
 <div class="container-fluid" style="text-align: center;">
   <div class="row">
-    <div class="col-md-4" *ngFor="let jjj of xxx">
-      {{ jjj }}
+    <div class="col-md-4" *ngFor="let jjj of xxx" style="height:550px;">
+      <img src="{{ jjj.imgadd }}"/><br/>
+      <span style="font-size: 24px;">{{ jjj.title }}</span>
+      <div fxLayout="column" fxLayoutAlign="center" style="margin-top: 15px;">
+        <div class="col-md-12">
+          <app-star [rating]="jjj.rating" style="font-size: 24px;float:left;"></app-star>
+          <span style="font-size: 24px;float:right;"><mat-icon>place</mat-icon>&nbsp;{{ jjj.address }}</span>
+        </div>
+        <div class="col-md-12">
+          <span style="font-size: 24px;float:left;"><mat-icon>attach_money</mat-icon>{{ jjj.price }}</span>
+          <span style="font-size: 24px;float:right;">{{ jjj.reviews }} Reviews</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

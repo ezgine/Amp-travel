@@ -1,65 +1,66 @@
-<div ngClass.lt-sm="container-fluid">
-  <mat-icon style="font-size: 40px;color:#fff;" ngStyle.gt-xs="margin-top:20px;margin-left:20px;">blur_on</mat-icon>
+<a href="#" style="width:100%;text-align: center;" ngStyle.gt-xs="text-align:left;">
+  <mat-icon style="font-size: 40px;color:#fff;margin-top: 20px;" ngStyle.gt-xs="margin-top:20px;margin-left:20px;">blur_on</mat-icon>
+</a>
+
+<div style="font-weight:bold;color:#fff;" ngClass.gt-md="headText_gt-md" ngClass.md="headText_md" ngClass.sm="headText_sm" ngClass.xs="headText_xs">
+  <span>Adventures</span><br fxHide.gt-sm/>
+  <span>made easy</span>
+  <div fxHide.lt-md style="color:#fff;font-size: 25px;">Find and book activities, tours, and experience.</div>
 </div>
 
-<div class="titleText_gt" fxHide.gt-xs><strong>Adventures<br/>made easy</strong></div>
-<div class="titleText" fxHide.lt-sm><strong>Adventures made easy</strong></div>
-<div class="titleText" fxHide.lt-lg style="font-size: 26px;">Find and book activities,tours,and experience.</div>
+<div ngStyle.gt-md="margin-left: 250px;margin-top: 80px;" ngStyle.md="margin-left: 200px;margin-top: 80px;" ngStyle.sm="margin-top:50px;" ngStyle.xs="margin-top:10px;">
 
-<div ngClass.gt-md="headInput"  ngClass.xs="headInput_xs" class="headInput_ipad">
-  <mat-form-field style="width:100%;">
-    <input matInput type="text" required style="text-indent: 10px;color:#fff;"/>
-    <mat-placeholder style="color:#8F98A3;"><mat-icon matSuffix style="color:#8F98A3;">place</mat-icon>&nbsp;&nbsp;&nbsp;Where would you like to go?</mat-placeholder>
-  </mat-form-field>
-</div>
-
-<div fxLayout="column" fxLayout.lt-lg="row" ngClass.gt-md="dateDiv" class="dateDiv_ipad" ngClass.xs="dateDiv_xs">
-  <span fxFlex.xs="5"></span>
-  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.lt-lg="dateText">
-    <input matInput [matDatepicker]="dp1" disabled ngClass.lt-lg="dateText">
-    <mat-placeholder ngClass.lt-lg="dateText"><mat-icon matSuffix>flight_takeoff</mat-icon>&nbsp;Departure</mat-placeholder>
-    <mat-datepicker-toggle matSuffix [for]="dp1"><mat-icon></mat-icon></mat-datepicker-toggle>
-    <mat-datepicker #dp1 disabled="false"></mat-datepicker>
-  </mat-form-field>
-  <span fxFlex.xs="10"></span>
-  <mat-form-field fxFlex.xs="40" ngStyle.gt-md="font-size: 20px;width:30%;" ngClass.lt-lg="dateText">
-    <input matInput [matDatepicker]="dp2" disabled ngClass.lt-lg="dateText">
-    <mat-placeholder ngClass.lt-lg="dateText"><mat-icon matSuffix>flight_land</mat-icon>&nbsp;Return</mat-placeholder>
-    <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
-    <mat-datepicker #dp2 disabled="false"></mat-datepicker>
-  </mat-form-field>
-  <span fxFlex.xs="5"></span>
-</div>
-
-<div ngClass.gt-md="buttonDiv" class="buttonDiv_ipad" ngClass.xs="buttonDiv_xs">
-  <button mat-raised-button color="primary" ngClass.gt-md="button" class="button_ipad" ngClass.xs="button_xs">Find Adventures & Tours</button>
-</div>
-<div fxHide.gt-md class="jump">
-  <a href="#a1" style="color:#8F98A3;">Explore<br/><mat-icon matSuffix style="color:#8F98A3;">keyboard_arrow_down</mat-icon></a>
-</div>
-
-<div fxHide.lt-lg fxLayout="row" style="margin-top: 5%;margin-left: 5%;margin-bottom: 3%;">
-  <div class="item" fxFlex="50">
-    <span style="font-size:50px;font-weight: bold;letter-spacing:1px;">Discover Adventures</span><br/><span style="font-size:20px;letter-spacing:1px;color:#8F98A3;">Get inspired and find your next big trip</span>
+  <div class="inputDiv" ngClass.gt-md="inputDiv_gtmd" ngClass.md="inputDiv_md" ngClass.sm="inputDiv_sm" ngClass.xs="inputDiv_xs">
+    <span class="spanIcon"><mat-icon style="color:#ADB0B4;font-size: 30px;">place</mat-icon></span>
+    <input type="text" placeholder="Where would you like to go ?" class="headInput" ngClass.gt-md="headInput_gtmd" ngClass.md="headInput_md" ngClass.sm="headInput_sm" ngClass.xs="headInput_xs"/>
   </div>
-  <mat-card>
-    <mat-card-title>From the blog</mat-card-title>
-    <mat-card-subtitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit amet dolor set</mat-card-subtitle>
-    <mat-card-actions>
-      <button mat-button color="primary">Read more</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
 
-<div fxHide.gt-md fxLayout="row" class="text1">
-  <div class="item" fxFlex="50">
-    <span class="text2">Discover<br/>Adventures</span>
+  <div ngClass.gt-sm="date_gtsm" ngClass.sm="date_sm" ngClass.xs="date_xs">
+        <mat-form-field ngStyle.sm="float:left;" ngStyle.xs="float:left;width:40%;">
+          <input matInput [matDatepicker]="dp1" disabled ngStyle.lt-md="color:#fff;">
+          <mat-placeholder ngStyle.lt-md="color:#fff;"><mat-icon matSuffix>flight_takeoff</mat-icon>&nbsp;Departure</mat-placeholder>
+          <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+          <mat-datepicker #dp1 disabled="false"></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field ngStyle.sm="float:right;" ngStyle.xs="float:right;width:40%;">
+          <input matInput [matDatepicker]="dp2" disabled ngStyle.lt-md="color:#fff;">
+          <mat-placeholder ngStyle.lt-md="color:#fff;"><mat-icon matSuffix>flight_land</mat-icon>&nbsp;Return</mat-placeholder>
+          <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+          <mat-datepicker #dp2 disabled="false"></mat-datepicker>
+        </mat-form-field>
   </div>
+
+  <button mat-raised-button class="button_all" ngClass.gt-sm="button_gtsm" ngClass.lt-md="button_ltmd">Find Adventures & Tours</button>
+
+  <div fxHide.gt-sm style="width:100%;text-align: center;margin-top:15%;">
+    <a href="#a1" style="color:#fff;text-decoration:none;">
+      Explore<br/>
+      <mat-icon matSuffix style="color:#fff;">keyboard_arrow_down</mat-icon>
+    </a>
+  </div>
+
   <a name="a1"></a>
+
+  <div style="width:90%;margin-top: 10px;" ngStyle.lt-md="margin-left:5%;">
+    <div ngStyle.gt-sm="float: left;margin-top:80px;" ngStyle.lt-md="margin-top:30%;">
+      <div fxHide.gt-sm style="font-size: 40px;font-weight:600;letter-spacing: 1px;">Discover<br/>Adventures</div>
+      <div fxHide.lt-md ngClass.gt-md="Text_gtmd" ngClass.md="Text_md">Discover Adventures</div>
+      <div fxHide.lt-md ngClass.gt-md="Text2_gtmd" ngClass.md="Text2_md">Get inspired and find your next big trip</div>
+    </div>
+
+    <mat-card fxHide.lt-md class="card">
+      <mat-card-title>From the blog</mat-card-title>
+      <mat-card-subtitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit amet dolor set</mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-button color="primary" style="color:#8B59E3;">Read more</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
 
-<app-multiple-choices ngStyle.gt-xs="text-align: center;" style="padding-top: 45px;padding-bottom: 60px;width:100%;height:100%;"></app-multiple-choices>
-<app-image-text fxHide.lt-sm style="text-align: center;"></app-image-text>
-<app-image-text-xs fxHide.gt-xs></app-image-text-xs>
+<app-multiple-choices ngStyle.gt-xs="text-align: center;" style="margin-top:100px;width:100%;height:100%;"></app-multiple-choices>
+<app-image-text fxHide.lt-md style="text-align: center;margin-top:50px;"></app-image-text>
+<app-image-text-xs fxHide.gt-sm ngStyle.sm="margin-top: 250px;" ngStyle.xs="margin-top: 600px;"></app-image-text-xs>
 <app-img-enlarge style="text-align: center;"></app-img-enlarge>
 <app-footer-view style="text-align: center;margin-top: 30px;"></app-footer-view>

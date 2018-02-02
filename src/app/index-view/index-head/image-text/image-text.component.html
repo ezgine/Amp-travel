@@ -8,10 +8,10 @@
        <span style="font-size: 25px;">{{ product.title }}</span>
        <div fxLayout="row wrap" fxLayoutAlign="center" style="text-align: center;margin-top: 20px;">
          <!--<span fxFlex="25" style="font-size: 24px;"><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon></span>-->
-         <app-star [rating]="product.rating" fxFlex.gt-md="25" fxFlex.lt-lg="50" style="font-size: 24px;"></app-star>
-         <span fxFlex.gt-md="25" fxFlex.lt-lg="50" style="font-size: 24px;"><mat-icon>attach_money</mat-icon>{{ product.price }}</span>
-         <span fxFlex.gt-md="25" fxFlex.lt-lg="100" style="font-size: 24px;"><mat-icon>place</mat-icon>{{ product.address }}</span>
-         <span fxFlexgt-md.="25" fxFlex.lt-lg="100" style="font-size: 24px;">{{ product.reviews }} Reviews</span>
+         <app-star [rating]="product.rating" fxFlex.gt-md="50" fxFlex.lt-lg="50" style="font-size: 24px;"></app-star>
+         <span fxFlex.gt-md="50" fxFlex.lt-lg="50" style="font-size: 24px;"><mat-icon>place</mat-icon>{{ product.address }}</span>
+         <span fxFlex.gt-md="50" fxFlex.lt-lg="50" style="font-size: 24px;"><mat-icon>attach_money</mat-icon>{{ product.price }}</span>
+         <span fxFlexgt-md.="50" fxFlex.lt-lg="50" style="font-size: 24px;">{{ product.reviews }} Reviews</span>
        </div>
      </div>
 
