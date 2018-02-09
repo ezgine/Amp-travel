@@ -1,37 +1,36 @@
-<div class="container-fluid">
+<div class="container">
   <mat-accordion class="row">
-    <mat-expansion-panel class="col-md-9" style="padding:0px;" [expanded]="step === 1" (opened)="setStep(1)">
+    <mat-expansion-panel class="col-md-10" style="padding:0px;" [expanded]="step === 1" (opened)="setStep(1)">
       <mat-expansion-panel-header style="border:1px solid #DCDCDC;">
-        <mat-panel-title>
+        <mat-panel-title class="col-sm-1" style="padding:0;">
           Filters
         </mat-panel-title>
-        <mat-panel-description>
-          <div style="">
+        <mat-panel-description class="col-sm-11" style="padding:0;">
+
+          <div class="col-sm-4" style="padding:0;">
             <span>Price&nbsp;&nbsp;</span><span style="padding: 1px;" [ngStyle]="{'background-color': check ? '#DAEFE3' : '#a9a9a9','color': check ? '#54B67E':'#ffffff'}">Up to ${{ check ? value : "0" }}</span>
           </div>
-          <div style="margin-left: 20px;">
+
+          <div class="col-sm-4" style="padding:0;">
             <span>Type&nbsp;&nbsp;</span>
-            <!--<span *ngIf="!check" style="background:#a9a9a9;color: #ffffff;padding: 1px;">All types</span>-->
-            <!--<span *ngIf="check">-->
-              <span *ngIf="test1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
+              <span *ngIf="test1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">1All types</span>
               <span *ngIf="test2" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
               <span *ngIf="test3" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
               <span *ngIf="test4" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
               <span *ngIf="test5" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
               <span *ngIf="test6" style="background:#DAEFE3;color: #54B67E;padding: 1px;">All types</span>
-            <!--</span>-->
           </div>
-          <div style="margin-left: 20px;">
-            <span>Type&nbsp;&nbsp;</span>
-            <!--<span *ngIf="check">-->
+
+          <div class="col-sm-4" style="padding:0;">
+            <span>City&nbsp;&nbsp;</span>
               <span *ngIf="checked1" style="background:#DAEFE3;color: #54B67E;padding: 1px;">晋江</span>
               <span *ngIf="checked2" style="background:#DAEFE3;color: #54B67E;padding: 1px;">泉州</span>
               <span *ngIf="checked3" style="background:#DAEFE3;color: #54B67E;padding: 1px;">厦门</span>
               <span *ngIf="checked4" style="background:#DAEFE3;color: #54B67E;padding: 1px;">福州</span>
               <span *ngIf="checked5" style="background:#DAEFE3;color: #54B67E;padding: 1px;">漳州</span>
               <span *ngIf="checked6" style="background:#DAEFE3;color: #54B67E;padding: 1px;">三明</span>
-            <!--</span>-->
           </div>
+
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="row" style="text-align: left;">
@@ -89,7 +88,7 @@
         </div>
 
         <div class="col-md-3" style="padding:0;">
-          <div style="color:#a9a9a9;margin-top: 20px;margin-left: 20px;">TYPE</div>
+          <div style="color:#a9a9a9;margin-top: 20px;margin-left: 20px;">City</div>
 
           <mat-checkbox align="start" [(ngModel)]="checked1" color="warn" style="margin-left: 20px;">
             <img src="../../../assets/images/1.png" alt="" width="50" height="50" style="margin-left: 50px;"/>
@@ -134,10 +133,10 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div fxLayout="column">
-        <button mat-button (click)="sortby('Basic')">Basic</button>
-        <button mat-button color="primary" (click)="sortby('Primary')">Primary</button>
-        <button mat-button color="accent" (click)="sortby('Accent')">Accent</button>
-        <button mat-button color="warn" (click)="sortby('warn')">Warn</button>
+        <button mat-button (click)="sortby('Basic')">Popular</button>
+        <button mat-button color="primary" (click)="sortby('Primary')">Best Rated</button>
+        <button mat-button color="accent" (click)="sortby('Accent')">New</button>
+        <button mat-button color="warn" (click)="sortby('warn')">Lowest Price</button>
       </div>
     </mat-expansion-panel>
   </mat-accordion>

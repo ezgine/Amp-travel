@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelResultsComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

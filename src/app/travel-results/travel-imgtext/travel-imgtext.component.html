@@ -1,14 +1,14 @@
-<div class="container-fluid" style="text-align: center;">
+<div class="container-fluid" style="text-align: left;">
   <div class="row">
-    <div class="col-md-4" *ngFor="let jjj of xxx" style="height:550px;">
-      <img src="{{ jjj.imgadd }}"/><br/>
-      <span style="font-size: 24px;">{{ jjj.title }}</span>
-      <div fxLayout="column" fxLayoutAlign="center" style="margin-top: 15px;">
-        <div class="col-md-12">
+    <div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let jjj of xxx" style="height:501px;">
+      <img class="col-sm-12 col-md-12 col-lg-12" style="padding: 0;" src="{{ jjj.imgadd }}"/><br/>
+      <span class="col-sm-12 col-md-12 col-lg-12" style="font-size: 24px;padding: 0;">{{ jjj.title }}</span>
+      <div class="col-sm-12 col-md-12 col-lg-12" fxLayout="column" fxLayoutAlign="center" style="margin-top: 15px;padding: 0;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 0;">
           <app-star [rating]="jjj.rating" style="font-size: 24px;float:left;"></app-star>
           <span style="font-size: 24px;float:right;"><mat-icon>place</mat-icon>&nbsp;{{ jjj.address }}</span>
         </div>
-        <div class="col-md-12">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 0;">
           <span style="font-size: 24px;float:left;"><mat-icon>attach_money</mat-icon>{{ jjj.price }}</span>
           <span style="font-size: 24px;float:right;">{{ jjj.reviews }} Reviews</span>
         </div>
@@ -16,4 +16,3 @@
     </div>
   </div>
 </div>
-
